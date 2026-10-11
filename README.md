@@ -6,10 +6,12 @@
 
 ## System Architecture
 
-- **Frontend**: React 18, Vite, TypeScript, TailwindCSS, Lucide Icons, Recharts.
-- **Backend Engine**: FastAPI, Python 3.11, Pydantic, Uvicorn.
-- **Database Engine**: SQLite (Local persistent demo) / PostgreSQL (Production cloud via `DATABASE_URL`).
+- **GitHub Repository**: [https://github.com/premsai-developer/fleetos-pulse](https://github.com/premsai-developer/fleetos-pulse) (Private)
+- **Frontend**: React 18, Vite, TypeScript, TailwindCSS, Lucide Icons, Recharts (Hosted on Vercel).
+- **Backend Engine**: FastAPI, Python 3.11, Pydantic, Uvicorn (Hosted on Render).
+- **Database Engine**: SQLite (Local persistent demo) / Render PostgreSQL (Production cloud via `DATABASE_URL`).
 - **Containerization**: Docker & Docker Compose.
+
 
 ---
 
