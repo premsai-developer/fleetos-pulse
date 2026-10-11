@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: fleetos-pulse-api
+    runtime: python
+    region: oregon
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ENVIRONMENT
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: fleetos-pulse-db
+          property: connectionString
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: ADMIN_API_KEY
+        generateValue: true
+
+databases:
+  - name: fleetos-pulse-db
+    databaseName: fleetos_pulse_db
+    user: fleetos_user
+    plan: free
+    region: oregon

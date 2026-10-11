@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Builds & Outputs
+dist/
+build/
+*.egg-info/
+
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+ENV/
+env/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.production
+
+# IDE & System Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
